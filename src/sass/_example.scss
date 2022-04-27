@@ -25,3 +25,24 @@
   background-size: cover;
   background-position: center;
 }
+
+.winner, .progress{
+  padding-left: 22px;
+  min-height: 22px;
+}
+.winner{
+  color: red;
+}
+.progress{
+  color: brown;
+}
+.table{
+  padding-left: 44px;
+}
+.start-btn{
+  width: 55px;
+  height: 55px;
+  border: solid 2px rgb(15, 235, 15);
+  border-radius: 50%;
+  margin-left: 75px;
+}
