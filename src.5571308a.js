@@ -5,6 +5,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"dldd":[function(require,module,exports) {
 const e=["Alfa","Beta","Gamma","Omega"];let t=0;const n={startBtn:document.querySelector(".js-race-start-btn"),winnerField:document.querySelector(".js-winner"),progressField:document.querySelector(".js-progress"),tableBody:document.querySelector(".js-result-table > tbody")};function r(){t+=1;const n=e.map(c);i("Race has been started! No placement of bets!"),a(""),o(n),s(n)}function o(e){Promise.race(e).then(({horse:e,time:n})=>{a(`${e} won with time ${n/100} s`),d({raceCounter:t,horse:e,time:n})})}function s(e){Promise.all(e).then(()=>i("Race is over. Please, place your bets!"))}function c(e,t){return new Promise(n=>{const r=u(1500,2500);setTimeout(()=>{n({horse:e,time:r,raceCounter:t})},r)})}function a(e){n.winnerField.textContent=e}function i(e){n.progressField.textContent=e}function u(e,t){return Math.ceil(Math.random()*(t-e-1)+e)}function d({horse:e,time:t,raceCounter:r}){const o=`<tr><td>${r}</td><td>${e}</td><td>${t/100}s</td></tr>`;n.tableBody.insertAdjacentHTML("beforeend",o)}n.startBtn.addEventListener("click",r);
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./storage"),require("./training"),require("./hippodrome");
-},{"./sass/main.scss":"clu1","./storage":"KZ7Y","./training":"KZ7Y","./hippodrome":"dldd"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-template/src.f5934679.js.map
+"use strict";require("./sass/main.scss"),require("./storage"),require("./training"),require("./hippodrome.js");
+},{"./sass/main.scss":"clu1","./storage":"KZ7Y","./training":"KZ7Y","./hippodrome.js":"dldd"}]},{},["Focm"], null)
+//# sourceMappingURL=/parcel-project-template/src.5571308a.js.map
